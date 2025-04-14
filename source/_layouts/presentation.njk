@@ -16,6 +16,21 @@
 	<div class="slides">
 		<section>
 			<h1 class="presentation-title">{{- title -}}</h1>
+			{%- if subtitle -%}
+				<p class="presentation-subtitle">{{- subtitle | safe -}}</p>
+			{%- endif -%}
+			<hr>
+			<p class="presentation-presenter">
+				<b class="presentation-name">{{- site.name -}}</b>
+				{%- if site.url -%}
+					<br>
+					<a class="presentation-website" href="{{- site.url -}}">{{- site.website -}}</a>
+				{%- endif -%}
+				{%- if site.email -%}
+					<br>
+					<a class="presentation-email" href="mailto:{{- site.email -}}">{{- site.email -}}</a>
+				{%- endif -%}
+			</p>
 		</section>
 
 		<section data-markdown>
