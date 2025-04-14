@@ -19,6 +19,8 @@
 	},
 	"scripts": {
 		"prepare": "nps prepare.init",
+		"build:css": "nps css.build",
+		"watch:css": "nps css.watch",
 		"build:site": "nps site.build",
 		"watch:site": "nps site.watch",
 		"build": "npm-run-all build:*",

@@ -31,6 +31,11 @@ export default {
 			}
 		},
 
+		css: {
+			"build": "sass --style=compressed --no-source-map ./source/_scss:./site/_assets/css",
+			"watch": "sass --watch ./source/_scss:./site/_assets/css"
+		},
+
 		/**
 			`site` scripts are specific to 11ty. Both will compile the full website, but while `build` builds, `watch` also starts the local 11ty server and watches for any changes to its source files.
 		*/
