@@ -15,7 +15,7 @@ export default {
 				init: "nps prepare.starwipe.source",
 
 				// Copy the sample files into the actual source files.
-				source: "cp -r ./source/_sample/* ./source/"
+				source: "rsync -avq --ignore-existing ./source/_sample/* ./source/"
 			},
 
 			// These scripts are specific to reveal.js.
@@ -24,11 +24,10 @@ export default {
 				// Run the initial reveal.js scripts.
 				init: "nps prepare.reveal.dist prepare.reveal.plugins",
 
-				// Copy compiled js and css assets from reveal into the `./site/` folder.
-				dist: "mkdir -p ./site/_assets/reveal/ && cp -r ./node_modules/reveal.js/dist/ ./site/_assets/reveal/",
+				// Copy compiled js & css assets from reveal into the `./site/` folder.
+				dist: "rsync -avq --ignore-existing ./node_modules/reveal.js/dist/ ./site/_assets/reveal/",
 
-				// Copy compiled plguins from reveal into the `./site/` folder.
-				plugins: "mkdir -p ./site/_assets/reveal/ && cp -r ./node_modules/reveal.js/plugin ./site/_assets/reveal/"
+				plugins: "rsync -avq --ignore-existing ./node_modules/reveal.js/plugin ./site/_assets/reveal/"
 			}
 		},
 
