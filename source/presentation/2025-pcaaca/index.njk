@@ -1,0 +1,27 @@
+---json
+{
+	"title": "“It was the Mirror!”",
+	"subtitle": "Untrusted Experience, Trauma, and the Other in Mike Flanagan's <i>Oculus</i>",
+	"theme": "dracula",
+	"slides": {
+		"totalTime": "15"
+	}
+}
+---
+
+{#
+	Slides are written in Markdown, as their own separate `.md` files within the
+	`slides` folder in this directory. Each Markdown file is then added here as
+	a Nunjucks include. 11ty compiles everything to create each presentation.
+
+	Regular Markdown can be written, and reveal.js has documentation on other
+	options that can be added within the Markdown, such as adding classes or
+	setting up code blocks.
+	https://revealjs.com/markdown/
+#}
+
+{% include "./slides/01.md" %}
+---
+{% include "./slides/02.md" %}
+---
+{% include "./slides/03.md" %}
