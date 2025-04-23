@@ -21,6 +21,7 @@ export default async function(eleventyConfig) {
 	// images are used in slides, they need to be copied over. PassThrough allows
 	// 11ty to grab those images and move them into the output site build.
 	eleventyConfig.addPassthroughCopy('./source/presentation/**/images/*.*');
+	eleventyConfig.addPassthroughCopy('./source/presentation/**/videos/*.*');
 
 	// Add the metagen plugin for 11ty.
 	// https://github.com/tannerdolby/eleventy-plugin-metagen
