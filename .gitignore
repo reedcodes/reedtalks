@@ -8,9 +8,9 @@
 # repository. HOWEVER, you will very most likely want to commit these files in
 # YOUR repository! Remove the following lines, or comment them out. That way,
 # your data and content is part of your repo!
-/source/_data/site.json
-/source/page/**/*.md
-/source/presentation/**/
+# /source/_data/site.json
+# /source/page/**/*.md
+# /source/presentation/**/
 
 # Do not commit common development files.
 .cache

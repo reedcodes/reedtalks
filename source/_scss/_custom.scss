@@ -1,0 +1,11 @@
+.reveal .slides {
+  text-align: var(--custom-text-align, left);
+
+  i, em {
+    font-style: italic;
+  }
+
+  .presentation-subtitle {
+    font-weight: bold;
+  }
+}
