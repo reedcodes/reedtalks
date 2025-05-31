@@ -12,7 +12,7 @@ import filterDateSimple from './source/_config/filters/date-simple.js';
 export default async function(eleventyConfig) {
 	// There are some files that we want git to ignore, and not commit to the
 	// repository. But 11ty _also_ ignores everything in the `.gitignore`, and we
-	// want it to process some of those files! So here we tell 11ty to disable 
+	// want it to process some of those files! So here we tell 11ty to disable
 	// using the `.gitignore`, and only use `.eleventyignore`.
 	eleventyConfig.setUseGitIgnore(false);
 
@@ -29,7 +29,8 @@ export default async function(eleventyConfig) {
 
 	// Add the MarkdownIt plugin to 11ty.
 	// https://github.com/markdown-it/markdown-it
-	eleventyConfig.setLibrary('md',
+	eleventyConfig.setLibrary(
+		'md',
 		markdownIt({
 			html: true,
 			breaks: true,
@@ -40,7 +41,7 @@ export default async function(eleventyConfig) {
 	// Add the favicon plugin for 11ty.
 	// https://github.com/NJAldwin/eleventy-plugin-gen-favicons
 	eleventyConfig.addPlugin(favicons, {
-		'outputDir': './site'
+		outputDir: './site'
 	});
 
 	// Filters and shortcodes are located in `./source/_config/`.
@@ -65,4 +66,4 @@ export const config = {
 		includes: '_includes',
 		layouts: '_layouts'
 	}
-}
+};
